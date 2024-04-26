@@ -1,16 +1,16 @@
-# e_commerce_exam_app
+<div align = "center">
 
-A new Flutter project.
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/ab602da3-ab39-496d-a51c-be8590873915" />
+  <img height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/fd452deb-96c9-4c22-8574-b74a25ff6c54" />
+  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/ef2fd932-aa0b-436e-8af7-b11ea43b61a9"  />
+</div>
 
-## Getting Started
+###
 
-This project is a starting point for a Flutter application.
+<h1 align="left"></h1>
 
-A few resources to get you started if this is your first Flutter project:
+###
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div align = "left">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/0eb9b090-bbd1-4f02-9ff5-1110393db070" />
+</div>
