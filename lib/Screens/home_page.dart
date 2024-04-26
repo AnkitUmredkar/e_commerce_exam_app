@@ -203,6 +203,7 @@ class _HomePageState extends State<HomePage> {
         border: Border.all(color: Colors.grey, width: 1),
       ),
       child: const TextField(
+        style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
             prefixIcon: Icon(
               Icons.search,
