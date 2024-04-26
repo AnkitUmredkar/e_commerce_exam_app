@@ -1,7 +1,6 @@
 import 'package:e_commerce_exam_app/utils/color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../utils/color.dart';
 import '../utils/global.dart';
@@ -20,7 +19,7 @@ class _CartPageState extends State<CartPage> {
       child: Scaffold(
         backgroundColor: bgColor,
         body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             children: [
               Row(
@@ -50,24 +49,47 @@ class _CartPageState extends State<CartPage> {
                     Icons.shopping_cart,
                     color: Colors.white,
                     size: 32,
-                  )
+                  ),
                 ],
               ),
               const SizedBox(
                 height: 30,
               ),
-              SingleChildScrollView(
-                child: Column(
-                    children: List.generate(
-                        CartList.length, (index) => CartProduct(index))),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                      children: List.generate(
+                          CartList.length, (index) => CartProduct(index))),
+                ),
               ),
-              const Spacer(),
               Container(
-                margin: EdgeInsets.only(left: 10,right: 10),
+                margin: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.all(15),
                 height: 90,
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.black
+                decoration: const BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    )),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Total Amount',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Poppins',
+                          fontSize: 20),
+                    ),
+                    Text(
+                      '$Amount',
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Poppins',
+                          fontSize: 20),
+                    )
+                  ],
                 ),
               ),
             ],
@@ -89,7 +111,7 @@ class _CartPageState extends State<CartPage> {
             height: double.infinity,
             width: 140,
             decoration: BoxDecoration(color: greyColor),
-            child: Image.asset(productList[index]['img']),
+            child: Image.asset(CartList[index]['img']),
           ),
           const SizedBox(
             width: 5,
@@ -98,7 +120,7 @@ class _CartPageState extends State<CartPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                productList[index]['name'],
+                CartList[index]['name'],
                 style: const TextStyle(
                     color: Colors.white,
                     fontFamily: 'Poppins',
@@ -107,7 +129,7 @@ class _CartPageState extends State<CartPage> {
               ),
               const SizedBox(height: 10),
               Text(
-                '${productList[index]['prise']}/-',
+                '${CartList[index]['prise']}/-',
                 style: const TextStyle(
                     color: Colors.white,
                     fontFamily: 'Poppins',
@@ -131,7 +153,8 @@ class _CartPageState extends State<CartPage> {
                           setState(() {
                             if (count[index] > 1) {
                               count[index]--;
-                              Amount = (Amount - CartList[0]['prise']).toInt();
+                              Amount =
+                                  (Amount - CartList[index]['prise']).toInt();
                             }
                           });
                         },
@@ -147,7 +170,8 @@ class _CartPageState extends State<CartPage> {
                         onTap: () {
                           setState(() {
                             count[index]++;
-                            Amount = (Amount + CartList[0]['prise']).toInt();
+                            Amount =
+                                (Amount + CartList[index]['prise']).toInt();
                           });
                         },
                         child: const Icon(

@@ -76,11 +76,15 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold),
                 ),
                 Wrap(
-                  children: List.generate(productList.length, (index) => GestureDetector(onTap: (){
-                    SelectedIndex = index;
-                    Navigator.of(context).pushNamed('/ProductPage');
-                  },child: productData(width,index)),)
-                ),
+                    children: List.generate(
+                  productList.length,
+                  (index) => GestureDetector(
+                      onTap: () {
+                        SelectedIndex = index;
+                        Navigator.of(context).pushNamed('/ProductPage');
+                      },
+                      child: productData(width, index)),
+                )),
               ],
             ),
           ),
@@ -89,21 +93,23 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Container productData(double width,index) {
+  Container productData(double width, index) {
     return Container(
       width: width / 2.4,
       height: 300,
-      margin: const EdgeInsets.only(top: 20,left: 8,right:8,bottom: 5),
+      margin: const EdgeInsets.only(top: 20, left: 8, right: 8, bottom: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             height: 200,
             decoration: const BoxDecoration(color: Color(0xFF161D2F)),
             child: Image.asset(productList[index]['img']),
           ),
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
           Text(
             productList[index]['name'],
             style: const TextStyle(
@@ -249,7 +255,7 @@ class _HomePageState extends State<HomePage> {
               width: 45,
               alignment: Alignment.center,
               child: GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.of(context).pushNamed('/CartPage');
                 },
                 child: const Icon(
@@ -268,9 +274,9 @@ class _HomePageState extends State<HomePage> {
                 alignment: Alignment.center,
                 decoration: const BoxDecoration(
                     color: Colors.red, shape: BoxShape.circle),
-                child: const Text(
-                  '0',
-                  style: TextStyle(color: Colors.white),
+                child: Text(
+                  '${CartList.length}',
+                  style: const TextStyle(color: Colors.white),
                 ),
               ),
             )
