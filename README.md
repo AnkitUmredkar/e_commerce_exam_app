@@ -11,8 +11,8 @@
 
 ###
 
-<div align = "center">
-  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/0eb9b090-bbd1-4f02-9ff5-1110393db070" />
+<div align = "left">
+  <img  height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/0eb9b090-bbd1-4f02-9ff5-1110393db070" />
 </div>
 
 ###
