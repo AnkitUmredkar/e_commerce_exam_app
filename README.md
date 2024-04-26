@@ -15,6 +15,12 @@
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/0eb9b090-bbd1-4f02-9ff5-1110393db070" />
 </div>
 
+###
+
+<h1 align="left"></h1>
+
+###
+
 <div align = "center">
   <video height="550" src="https://github.com/AnkitUmredkar/e_commerce_exam_app/assets/149374001/e3a60418-f998-4ccf-ae9b-35cfadf888fb"></video>
 </div>
